@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PrintTut" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ESO-v5-299">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7k0-2Q-oav">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" id="ghV-5Q-v0Q">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zUa-Gf-bnc">
+                                            <rect key="frame" x="20" y="7" width="57" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Print dis"/>
+                                            <connections>
+                                                <action selector="Print:" destination="BYZ-38-t0r" eventType="touchUpInside" id="brY-p2-8LO"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7k0-2Q-oav" firstAttribute="leading" secondItem="ESO-v5-299" secondAttribute="leading" id="AxQ-GJ-5fh"/>
+                            <constraint firstItem="ESO-v5-299" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Doe-gs-hP7"/>
+                            <constraint firstItem="7k0-2Q-oav" firstAttribute="trailing" secondItem="ESO-v5-299" secondAttribute="trailing" id="KxG-h5-BgJ"/>
+                            <constraint firstItem="ESO-v5-299" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bMK-ze-0Uk"/>
+                            <constraint firstAttribute="trailing" secondItem="ESO-v5-299" secondAttribute="trailing" id="cl8-8a-lqd"/>
+                            <constraint firstItem="ESO-v5-299" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="hyq-IP-oPF"/>
+                            <constraint firstItem="7k0-2Q-oav" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="v1E-an-Em0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="ESO-v5-299" id="uaE-uq-nsX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="320"/>
+        </scene>
+    </scenes>
+</document>
